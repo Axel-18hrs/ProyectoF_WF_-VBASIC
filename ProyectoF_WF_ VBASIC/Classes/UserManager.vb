@@ -12,7 +12,7 @@ Namespace ProyectoF_WF.Classes
         Public Sub New()
             _users = New List(Of User)()
         End Sub
-
+        ' B
         Public Sub LoadUsers()
             Dim _userFolderPath As String = ClientManager.UserFolderPath
             Dim _adminFolderPath As String = ClientManager.AdministratorFolderPath

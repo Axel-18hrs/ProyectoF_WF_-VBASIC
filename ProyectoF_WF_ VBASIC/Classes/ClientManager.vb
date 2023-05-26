@@ -10,7 +10,7 @@ Namespace ProyectoF_WF.Classes
     Module ClientManager
         Public Property ClientInstance As Client
         Public Property AdministratorInstance As Administrator
-
+        ' B
         Public ReadOnly Property UserFolderPath As String
             Get
                 Return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "ProyectoF_WF_vbasic", "Users")

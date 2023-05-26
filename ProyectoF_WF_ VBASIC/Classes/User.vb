@@ -15,7 +15,9 @@ Namespace ProyectoF_WF.Classes
         End Sub
 
         Public Overridable Sub Deff()
+
             Console.WriteLine("user")
+
         End Sub
     End Class
 

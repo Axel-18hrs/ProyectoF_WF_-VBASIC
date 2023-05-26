@@ -49,30 +49,35 @@ Partial Class User_Interface
         '
         Me.escogerArchivoToolStripMenuItem.Name = "escogerArchivoToolStripMenuItem"
         Me.escogerArchivoToolStripMenuItem.Size = New System.Drawing.Size(97, 24)
+        Me.escogerArchivoToolStripMenuItem.Size = New System.Drawing.Size(97, 26)
         Me.escogerArchivoToolStripMenuItem.Text = "Choose file"
         '
         'imagenesDelUsuarToolStripMenuItem
         '
         Me.imagenesDelUsuarToolStripMenuItem.Name = "imagenesDelUsuarToolStripMenuItem"
         Me.imagenesDelUsuarToolStripMenuItem.Size = New System.Drawing.Size(112, 24)
+        Me.imagenesDelUsuarToolStripMenuItem.Size = New System.Drawing.Size(112, 26)
         Me.imagenesDelUsuarToolStripMenuItem.Text = "Studio image"
         '
         'videosDelUsuarioToolStripMenuItem
         '
         Me.videosDelUsuarioToolStripMenuItem.Name = "videosDelUsuarioToolStripMenuItem"
         Me.videosDelUsuarioToolStripMenuItem.Size = New System.Drawing.Size(99, 24)
+        Me.videosDelUsuarioToolStripMenuItem.Size = New System.Drawing.Size(99, 26)
         Me.videosDelUsuarioToolStripMenuItem.Text = "User videos"
         '
         'Log_OutToolStripMenuItem
         '
         Me.Log_OutToolStripMenuItem.Name = "Log_OutToolStripMenuItem"
         Me.Log_OutToolStripMenuItem.Size = New System.Drawing.Size(74, 24)
+        Me.Log_OutToolStripMenuItem.Size = New System.Drawing.Size(74, 26)
         Me.Log_OutToolStripMenuItem.Text = "Log out"
         '
         'pbCargarImagenes
         '
         Me.pbCargarImagenes.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pbCargarImagenes.Location = New System.Drawing.Point(69, 70)
+        Me.pbCargarImagenes.Location = New System.Drawing.Point(72, 59)
         Me.pbCargarImagenes.Name = "pbCargarImagenes"
         Me.pbCargarImagenes.Size = New System.Drawing.Size(1225, 419)
         Me.pbCargarImagenes.TabIndex = 3

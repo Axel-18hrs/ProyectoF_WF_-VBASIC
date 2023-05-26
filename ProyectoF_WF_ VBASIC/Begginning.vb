@@ -5,7 +5,6 @@ Imports System.IO
 
 Public Class Begginning
     Private _userManager As UserManager
-    Private _administrator As Administrator
 
     Public Sub New()
         InitializeComponent()
@@ -52,10 +51,10 @@ Public Class Begginning
 
         Dim _administrator As Administrator = New Administrator() With
         {
-           .Id = Guid.NewGuid(),
-           .IsAdmin = True,
-           .Name = "SAM34",
-           .Password = "1212"
+        .Id = Guid.NewGuid(),
+            .IsAdmin = True,
+            .Name = "SAM34",
+            .Password = "1212"
         }
         Dim userFolderPath As String = Path.Combine(ClientManager.AdministratorFolderPath, _administrator.Name)
         Dim jsonFilePath As String = Path.Combine(userFolderPath, $"{_administrator.Name}.json")
@@ -119,7 +118,7 @@ Public Class Begginning
             Dim us As New User_Interface With {
             .StartPosition = FormStartPosition.Manual,
             .Location = Me.Location,
-            .FormBase = Me
+            .FormBase1 = Me
             }
             us.ShowDialog()
         Else
@@ -137,7 +136,7 @@ Public Class Begginning
         Dim userFilePaths As String() = Directory.GetFiles(projectFolderPath, $"{username}.json", SearchOption.AllDirectories)
 
         If userFilePaths.Length > 0 Then
-            ' Considerar solo el primer archivo JSON coincidente
+            ' Considerar solo el primer archivo JSON coincident
             Dim userFilePath As String = userFilePaths(0)
 
             ' Cargar el contenido del archivo JSON
@@ -158,11 +157,11 @@ Public Class Begginning
                     Dim _administrator As Administrator = New Administrator() With
             {
                 .Id = existingUser.Id,
-                .IsAdmin = existingUser.IsAdmin,
-                .Name = existingUser.Name,
-                .Password = existingUser.Password,
-                .Registration_Date = existingUser.Registration_Date
-            }
+                    .IsAdmin = existingUser.IsAdmin,
+                    .Name = existingUser.Name,
+                    .Password = existingUser.Password,
+                    .Registration_Date = existingUser.Registration_Date
+                }
                     ClientManager.InitializeAdministrator(_administrator)
                     _administrator.Deff()
 
@@ -176,24 +175,24 @@ Public Class Begginning
                         Dim userInterface As User_Interface = New User_Interface()
                         userInterface.StartPosition = FormStartPosition.Manual
                         userInterface.Location = Me.Location
-                        userInterface.FormBase = Me
+                        userInterface.FormBase1 = Me
                         userInterface.ShowDialog()
                     End If
                 Else
                     Dim _client As Client = New Client() With
             {
                 .Id = existingUser.Id,
-                .IsAdmin = existingUser.IsAdmin,
-                .Name = existingUser.Name,
-                .Password = existingUser.Password,
-                .Registration_Date = existingUser.Registration_Date
-            }
+                    .IsAdmin = existingUser.IsAdmin,
+                    .Name = existingUser.Name,
+                    .Password = existingUser.Password,
+                    .Registration_Date = existingUser.Registration_Date
+                }
                     ClientManager.InitializeCliente(_client)
                     _client.Deff()
                     Dim userInterface As User_Interface = New User_Interface()
                     userInterface.StartPosition = FormStartPosition.Manual
                     userInterface.Location = Me.Location
-                    userInterface.FormBase = Me
+                    userInterface.FormBase1 = Me
                     userInterface.ShowDialog()
                 End If
             Else

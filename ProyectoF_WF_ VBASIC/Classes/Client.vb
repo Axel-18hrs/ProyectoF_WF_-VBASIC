@@ -92,9 +92,7 @@ Namespace ProyectoF_WF.Classes
                 MessageBox.Show("Error combining the destination file path.")
             End If
         End Sub
-        ''' <summary>
-        ''' METHOD
-        ''' </summary>
+
         Public Sub RefreshPaths()
             Dim _user As Client = ClientManager.ClientInstance
             _imagePaths.Clear()
