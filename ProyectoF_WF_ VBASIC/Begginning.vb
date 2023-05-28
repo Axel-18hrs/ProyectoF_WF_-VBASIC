@@ -5,6 +5,7 @@ Imports System.IO
 
 Public Class Begginning
     Private _userManager As UserManager
+    Private _administrator As Administrator
 
     Public Sub New()
         InitializeComponent()
@@ -194,6 +195,7 @@ Public Class Begginning
                     userInterface.Location = Me.Location
                     userInterface.FormBase1 = Me
                     userInterface.ShowDialog()
+                    ClientManager.InitializeCliente(_client)
                 End If
             Else
                 ' El nombre de usuario no existe o la contraseña es incorrecta

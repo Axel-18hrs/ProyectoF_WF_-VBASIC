@@ -67,6 +67,7 @@ Partial Public Class User_Interface
         originalPictureBoxLocation = pbCargarImagenes.Location
 
         AxWindowsMediaPlayer1.Dock = DockStyle.Fill
+
         pbCargarImagenes.SizeMode = PictureBoxSizeMode.Zoom
         pbCargarImagenes.Anchor = AnchorStyles.None
         pbCargarImagenes.Location = New Point((Me.ClientSize.Width - pbCargarImagenes.Width) \ 2, (Me.ClientSize.Height - pbCargarImagenes.Height) \ 2)
@@ -79,12 +80,16 @@ Partial Public Class User_Interface
     Private Sub CargarVideos()
         AxWindowsMediaPlayer1.URL = Nothing
 
+        ' Verificar si la lista de rutas de videos está vacía o es nula
         If videoPaths Is Nothing OrElse videoPaths.Count = 0 Then
             MessageBox.Show("No videos found.")
             Return
         End If
 
+        ' Obtener la primera ruta de video de la lista
         Dim videoPath As String = videoPaths(0)
+
+        ' Asignar la ruta del video al control AxWindowsMediaPlayer
         AxWindowsMediaPlayer1.URL = videoPath
         AxWindowsMediaPlayer1.Ctlcontrols.stop()
     End Sub
@@ -149,6 +154,10 @@ Partial Public Class User_Interface
         Else
             MessageBox.Show("No videos or images found.")
         End If
+    End Sub
+
+    Private Sub AxWindowsMediaPlayer1_Enter(sender As Object, e As EventArgs) Handles AxWindowsMediaPlayer1.Enter
+
     End Sub
 
     Private Sub AxWindowsMediaPlayer1_PreviewKeyDown(sender As Object, e As PreviewKeyDownEventArgs) Handles AxWindowsMediaPlayer1.PreviewKeyDown
@@ -226,6 +235,7 @@ Partial Public Class User_Interface
 
             Select Case e.KeyCode
                 Case Keys.Space
+                    menuStrip1.Visible = True
                     Me.WindowState = FormWindowState.Normal
                     Me.FormBorderStyle = FormBorderStyle.Sizable
                     pbCargarImagenes.Visible = True
